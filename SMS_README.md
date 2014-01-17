@@ -18,27 +18,11 @@ Server cung cấp 2 API
     Subcategory: tán gái sẽ chứa cụ thể các tin nhắn
 + `name`: tên của category hoặc subcategory
 + `id`: ID cụ thể của các category/hoặc subcategory
-
-
-# Get thông tin của một category `/v1/category/<category_id>/`
-VD: `/v1/category/13/`
-
-## GET parameters
-+ `api_key`: api key cuả client
-+ `api_sig`: cách tính API signature được ghi trong tài liệu bảo mật API
-+ `time`: epoch time cuả hệ thống
-
-## Dữ liệu trả về là một mảng các JSON object. Mỗi object sẽ bao gồm các trường
-+ `type`: kiểu int. Nhận giá trị 0 hoặc 1
-   - 0: category
-   - 1: subcategory
-  Category và subcategory khác nhau ở điểm. Subcategory chỉ chứa các tin nhắn sms cụ thể.
-  Còn category thì chứa các category/subcategory khác
-  VD:
-    Category: tình yêu chứa các subcategory: tán gái, tỏ tình, gửi người yêu
-    Subcategory: tán gái sẽ chứa cụ thể các tin nhắn
-+ `name`: tên của category hoặc subcategory
-+ `id`: ID cụ thể của các category/hoặc subcategory
++ `data`: Nếu type là 0, thì data sẽ là list các sub category.
+   Nếu không có subcategory hoặc type là 1, data sẽ là []
+   Mỗi một subcategory sẽ có 3 trường
+      + `name`: tên của subcategory
+      + `id`: id của subcategory
 
 
 # Get thông tin của một subcategory `/v1/subcategory/<subcategory_id>/`
