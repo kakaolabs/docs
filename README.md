@@ -1,10 +1,13 @@
 API document for common application manager system
 
-System allow many developers can join in. Each developer have many apps
-Each developer will be given 2 hash key: **api_key** and **api_secret**
-**api_key** will be used as GET parameter for all API to send to server.
-**api_secret** will be use to calculate api_signature which will be use as
-GET parameter for all API
+System allow many developers can join in. Each developer have many apps.
+
+Each developer will be given 2 hash key: **api_key** and **api_secret**.
+
+    + **api_key** will be used as GET parameter for all API to send to server.
+
+    + **api_secret** will be use to calculate api_signature which will be use as
+    GET parameter for all API
 
 
 # User signup
