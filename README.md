@@ -11,12 +11,12 @@ Each developer will be given 2 hash key: **api_key** and **api_secret**.
 
 
 # User signup
-/v1/users/signup
+/v1/devices/signup
 
 #### GET params
 + `api_key`
 + `api_secret`
-+ `app_id` - App id is unique for all users
++ `app_secret` - App secret is unique for each application
 
 #### POST params
 + `device_id` - will be use to send push notification
@@ -29,12 +29,12 @@ Each developer will be given 2 hash key: **api_key** and **api_secret**.
 
 
 # User start session
-/v1/users/start
+/v1/devices/start
 
 #### GET params
 + `api_key`
 + `api_secret`
-+ `app_id` - App id is unique for all users
++ `app_secret` - App secret is unique for each application
 + `version` - Current version of the app
 + `access_token`
 
@@ -47,7 +47,7 @@ Each developer will be given 2 hash key: **api_key** and **api_secret**.
 #### GET params
 + `api_key`
 + `api_secret`
-+ `app_id` - App id is unique for all users
++ `app_secret` - App secret is unique for each application
 + `version` - Current version of the app
 + `access_token`
 
@@ -81,6 +81,7 @@ List of objects
 + `version` - newest version of app id
 + `force_update` - true/false if true use must download the app
 + `download_url` - link to download app
+
 
 # App news
 /v1/app/:app_id/news
