@@ -21,45 +21,20 @@ Each developer will be given 2 hash key: **api_key** and **api_secret**.
 #### POST params
 + `device_id` - will be use to send push notification
 + `device_type` - iphone, ipad, samsung, ...
-+ `os` - ios, android
++ `os` - 0 - iOS, 1 - android
 + `os_version` - 7.0, 6.0
 
 #### JSON result
 + `access_token` - will be used for next time request
 
 
-# User start session
-/v1/devices/start
-
-#### GET params
-+ `api_key`
-+ `api_secret`
-+ `app_secret` - App secret is unique for each application
-+ `version` - Current version of the app
-+ `access_token`
-
-#### JSON result: {}
-
-
-# User end session
-/v1/users/start
-
-#### GET params
-+ `api_key`
-+ `api_secret`
-+ `app_secret` - App secret is unique for each application
-+ `version` - Current version of the app
-+ `access_token`
-
-#### JSON result: {}
-
-
 # App related
-/v1/apps
+/v1/apps/related
 
 #### GET params
 + `api_key`
 + `api_secret`
++ `os` - OS type. 0 - iOS, 1 - android
 
 #### JSON result
 List of objects
@@ -79,20 +54,6 @@ List of objects
 
 #### JSON result
 + `version` - newest version of app id
++ `subversion` - newest version of app id
 + `force_update` - true/false if true use must download the app
 + `download_url` - link to download app
-
-
-# App news
-/v1/app/:app_id/news
-
-#### GET params
-+ `api_key`
-+ `api_secret`
-+ `from_time` - epoch time
-
-#### JSON result
-List of objects:
-+ `title`
-+ `content`
-+ `timestamp`
