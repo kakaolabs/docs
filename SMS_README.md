@@ -1,6 +1,6 @@
 Server cung cấp 2 API
 
-# Get list category `/v1/categories/`
+# Get list category `/sms/v1/categories/`
 
 ## GET parameters
 + `api_key`: api key cuả client
@@ -25,8 +25,8 @@ Server cung cấp 2 API
       + `id`: id của subcategory
 
 
-# Get thông tin của một subcategory `/v1/subcategory/<subcategory_id>/`
-VD: `/v1/subcategory/12/`
+# Get thông tin của một subcategory `/sms/v1/subcategory/<subcategory_id>/`
+VD: `/sms/v1/subcategory/12/`
 
 ## GET parameters
 + `api_key`: api key cuả client
