@@ -1,13 +1,13 @@
 Server cung cấp 2 API
 
-# Get list category `/sms/v1/categories/`
+## Get list category `/sms/v1/categories/`
 
-## GET parameters
+#### GET parameters
 + `api_key`: api key cuả client
 + `api_sig`: cách tính API signature được ghi trong tài liệu bảo mật API
 + `time`: epoch time cuả hệ thống (bắt buộc phải thêm để signature của API là khác nhau)
 
-## Dữ liệu trả về là một mảng các JSON object. Mỗi object sẽ bao gồm các trường
+#### Dữ liệu trả về là một mảng các JSON object. Mỗi object sẽ bao gồm các trường
 + `type`: kiểu int. Nhận giá trị 0 hoặc 1
    - 0: category
    - 1: subcategory
@@ -31,10 +31,10 @@ Server cung cấp 2 API
       + `index`: index của các subcategory. Thứ tự sắp xếp như sắp xếp category
 
 
-# Get thông tin của một subcategory `/sms/v1/subcategory/<subcategory_id>/`
+## Get thông tin của một subcategory `/sms/v1/subcategory/<subcategory_id>/`
 VD: `/sms/v1/subcategory/12/`
 
-## GET parameters
+### GET parameters
 + `api_key`: api key cuả client
 + `api_sig`: cách tính API signature được ghi trong tài liệu bảo mật API
 + `size`: (optional) giá trị mặc định là 50. Đây là số lượng các tin nhắn sẽ trả về. Giá trị lớn nhất của size là 50
@@ -42,7 +42,7 @@ VD: `/sms/v1/subcategory/12/`
    Server sẽ trả về `size` dữ liệu từ `offset` từ vị trí offset
 + `time`: epoch time cuả hệ thống (bắt buộc phải thêm để signature của API là khác nhau)
 
-## Dữ liệu trả về là một mảng các JSON object. Mỗi object sẽ bao gồm các trường
+#### Dữ liệu trả về là một mảng các JSON object. Mỗi object sẽ bao gồm các trường
 + `id`: ID của một tin nhắn
 + `content`: tên của category hoặc subcategory
 + `votes`: số lần được vote (mặc định bằng 0)
